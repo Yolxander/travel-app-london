@@ -3,7 +3,11 @@ import { createWebHistory, createRouter } from "vue-router";
 const routes =  [
     {
         path: "/",
-        alias: "/tutorials",
+        name: "cards",
+        component: () => import("../components/GridCardsComponent.vue")
+    },
+    {
+        path: "/tutorials",
         name: "tutorials",
         component: () => import("../components/ TutorialsList.vue")
     },

@@ -2,7 +2,7 @@
     <div class="submit-form">
         <div v-if="!submitted">
             <div class="form-group">
-                <label for="title">Title</label>
+                <label for="title">Title ( something fun and short )</label>
                 <input
                         type="text"
                         class="form-control"
@@ -15,24 +15,26 @@
 
             <div class="form-group">
                 <label for="description">Description</label>
-                <input
-                        class="form-control"
-                        id="description"
-                        required
-                        v-model="tutorial.description"
-                        name="description"
-                />
+                <textarea
+                    class="form-control"
+                    id="description"
+                    required
+                    v-model="tutorial.description"
+                    name="description"
+                    rows="4"
+                ></textarea>
             </div>
 
 
             <div class="form-group">
                 <label for="date">Date</label>
                 <input
-                    class="form-control"
-                    id="date"
-                    required
-                    v-model="tutorial.date"
-                    name="date"
+                    type="date"
+                class="form-control"
+                id="date"
+                required
+                v-model="tutorial.date"
+                name="date"
                 />
             </div>
 
