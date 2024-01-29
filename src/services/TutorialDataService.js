@@ -6,7 +6,6 @@ class TutorialDataService {
     getAll() {
         return db;
     }
-
     create(tutorial) {
         return db.push(tutorial);
     }

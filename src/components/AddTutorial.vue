@@ -24,6 +24,29 @@
                 />
             </div>
 
+
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input
+                    class="form-control"
+                    id="date"
+                    required
+                    v-model="tutorial.date"
+                    name="date"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input
+                    class="form-control"
+                    id="location"
+                    required
+                    v-model="tutorial.location"
+                    name="location"
+                />
+            </div>
+
             <button @click="saveTutorial" class="btn btn-success">Submit</button>
         </div>
 
@@ -45,6 +68,8 @@ export default {
             tutorial: {
                 title: "",
                 description: "",
+                location: "",
+                date:"",
                 published: false
             },
             submitted: false
@@ -55,6 +80,8 @@ export default {
             var data = {
                 title: this.tutorial.title,
                 description: this.tutorial.description,
+                date: this.tutorial.date,
+                location: this.tutorial.location,
                 published: false
             };
 
@@ -73,6 +100,8 @@ export default {
             this.tutorial = {
                 title: "",
                 description: "",
+                location: "",
+                date:"",
                 published: false
             };
         }

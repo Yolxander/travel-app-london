@@ -22,6 +22,27 @@
                 />
             </div>
 
+
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="date"
+                    v-model="currentTutorial.date"
+                />
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    id="location"
+                    v-model="currentTutorial.location"
+                />
+            </div>
+
             <div class="form-group">
                 <label><strong>Status:</strong></label>
                 {{ currentTutorial.published ? "Published" : "Pending" }}
@@ -95,6 +116,8 @@ export default {
             const data = {
                 title: this.currentTutorial.title,
                 description: this.currentTutorial.description,
+                date: this.currentTutorial.date,
+                location: this.currentTutorial.location,
             };
 
             TutorialDataService.update(this.currentTutorial.key, data)
@@ -119,6 +142,7 @@ export default {
     mounted() {
         this.message = "";
         this.currentTutorial = { ...this.tutorial }
+        console.log(this.currentTutorial)
     },
 };
 </script>
